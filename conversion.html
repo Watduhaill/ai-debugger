@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Code Converter</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="con-script.js" defer></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center p-6 relative">
+  <!-- Home Button -->
+  <a href="index.html" class="absolute top-6 left-6 bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded font-semibold shadow transition">
+    &larr; Home
+  </a>
+  <h1 class="text-3xl font-bold mb-8">Code Language Converter</h1>
+  <div class="bg-gray-800 rounded shadow p-8 w-full max-w-2xl flex flex-col space-y-6">
+    <div class="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0">
+      <div class="flex-1">
+        <label class="block mb-2 font-semibold" for="currentLang">Current Language</label>
+        <select id="currentLang" class="w-full p-2 rounded bg-gray-700 text-white">
+          <option value="">Select language</option>
+          <option value="python">Python</option>
+          <option value="java">Java</option>
+          <option value="cpp">C++</option>
+          <option value="c">C</option>
+        </select>
+      </div>
+      <div class="flex-1">
+        <label class="block mb-2 font-semibold" for="convertLang">Convert To</label>
+        <select id="convertLang" class="w-full p-2 rounded bg-gray-700 text-white">
+          <option value="">Select language</option>
+          <option value="python">Python</option>
+          <option value="java">Java</option>
+          <option value="cpp">C++</option>
+          <option value="c">C</option>
+        </select>
+      </div>
+    </div>
+    <div>
+      <label class="block mb-2 font-semibold" for="codeInput">Paste Your Code</label>
+      <textarea id="codeInput" rows="8" class="w-full p-2 rounded bg-gray-700 text-white font-mono" placeholder="Paste your code here..."></textarea>
+    </div>
+    <button id="convertBtn" class="w-full py-2 bg-blue-600 hover:bg-blue-700 rounded text-white font-semibold disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+      Convert
+    </button>
+    <div id="resultContainer" class="mt-4"></div>
+  </div>
+</body>
+</html>

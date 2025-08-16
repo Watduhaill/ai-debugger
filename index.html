@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Code Debugger & Explainer - Chat</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <style>
+    .chat-container {
+      display: flex;
+      flex-direction: column; /* changed from column-reverse */
+      height: 70vh;
+      overflow-y: auto;
+      padding-bottom: 1rem;
+      background: #1f2937;
+    }
+    .chat-bubble {
+      max-width: 75%;
+      padding: 0.75rem 1rem;
+      border-radius: 1.25rem;
+      margin-bottom: 1rem;
+      word-break: break-word;
+      white-space: pre-wrap;
+    }
+    .chat-user {
+      align-self: flex-end;
+      background: #2563eb;
+      color: white;
+      border-bottom-right-radius: 0.25rem;
+    }
+    .chat-ai {
+      align-self: flex-start;
+      background: #374151;
+      color: #fff;
+      border-bottom-left-radius: 0.25rem;
+    }
+    #logList {
+      overflow-y: auto;
+      max-height: 60vh;
+    }
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-y: hidden;
+    }
+  </style>
+  <script src="index-script.js" defer></script>
+  </head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col overflow-x-hidden">
+<!-- Login Modal -->
+<div
+  id="loginModal"
+  class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50"
+>
+  <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-80 text-center">
+    <h2 class="text-xl font-semibold mb-4">Enter your username</h2>
+    <input
+      type="text"
+      id="usernameInput"
+      class="w-full p-2 mb-4 rounded bg-gray-700 text-white"
+      placeholder="Username"
+    />
+    <input
+      type="password"
+      id="passwordInput"
+      class="w-full p-2 mb-4 rounded bg-gray-700 text-white"
+      placeholder="Password"
+    />
+    <button
+      onclick="submitUsername()"
+      class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded w-full"
+    >
+      Continue
+    </button>
+  </div>
+</div>
+
+  <!-- Navigation -->
+  <nav class="bg-gray-800 w-full p-4 flex justify-between items-center">
+    <span class="text-lg">Your coding assistant is ready!</span>
+    <span class="text-sm"
+      >Welcome, <strong id="userDisplay">User</strong></span
+    >
+  </nav>
+
+  <div class="flex flex-1 overflow-hidden">
+    <!-- Sidebar -->
+    <aside class="w-1/4 bg-gray-800 p-4 hidden md:block">
+      <h2 class="text-xl font-semibold mb-4">Bug Log</h2>
+      <a
+        href="quiz.html"
+        class="inline-block mb-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded text-center"
+      >
+        Take Quiz
+      </a>
+      <!-- Add this inside the same div as the See Quiz button -->
+      <a
+      href="conversion.html"
+      class="inline-block mb-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded text-center">
+      Code Conversion
+      </a>
+
+      <ul id="logList" class="space-y-2 overflow-y-auto max-h-[90vh]"></ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col justify-end p-6 overflow-y-auto">
+      <h1 class="text-3xl font-bold mb-4">Fix.It</h1>
+      <div
+        id="chat"
+        class="chat-container bg-gray-800 rounded p-4 mb-4"
+      ></div>
+      <form
+        id="codeForm"
+        class="flex gap-2"
+        onsubmit="handleFormSubmit(event)"
+      >
+        <textarea
+          id="codeInput"
+          rows="2"
+          class="flex-1 p-3 rounded bg-gray-800 text-white resize-none"
+          placeholder="Paste your code and hit send..."
+        ></textarea>
+        <button
+          type="submit"
+          class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded self-end"
+        >
+          Send
+        </button>
+      </form>
+    </main>
+  </div>
+</body>
+</html>

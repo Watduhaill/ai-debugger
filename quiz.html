@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bug-Based Quiz</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="quiz-script.js" defer ></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center p-6 relative">
+  <!-- Home Button -->
+  <a href="index.html" class="absolute top-6 left-6 bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded font-semibold shadow transition">
+    &larr; Home
+  </a>
+  <h1 class="text-3xl font-bold mb-6">Bug-Based Coding Quiz</h1>
+  <!-- Loading Tips -->
+  <div id="loadingTips" class="w-full max-w-2xl mb-6 p-4 bg-gray-800 rounded shadow flex items-center justify-center text-lg"></div>
+  <div id="quizContainer" class="w-full max-w-3xl space-y-4"></div>
+  <button id="submitBtn" class="mt-6 px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded text-white font-semibold hidden">Submit Answers</button>
+</body>
+</html>
